@@ -5,30 +5,34 @@ This project is a Java-based web service application that includes both SOAP and
 ## Project Structure
 
 .
+├── .gitignore
 ├── README.md
 ├── pom.xml
 └── src
     ├── main
     │   ├── java
-    │   │   └── com
-    │   │       └── webservice
-    │   │           ├── rest
-    │   │           │   ├── RestService.java
-    │   │           │   └── RestServicePublisher.java
-    │   │           └── soap
-    │   │               ├── SoapService.java
-    │   │               └── SoapServicePublisher.java
+    │   │   └── group1
+    │   │       ├── rest
+    │   │       ├── soap
+    │   │           ├── client
+    │   │           │   └── SoapClient.java
+    │   │           ├── model
+    │   │           │   └── Book.java
+    │   │           ├── service
+    │   │           │   ├── BookService.java
+    │   │           │   └── BookServiceImpl.java
+    │   │           ├── CORSFilter.java
+    │   │           └── SoapServicePublisher.java
     │   └── webapp
+    │       ├── index.jsp
     │       └── WEB-INF
+    │           ├── sun-jaxws.xml
     │           └── web.xml
     └── test
         └── java
-            └── com
-                └── webservice
-                    ├── rest
-                    │   └── RestServiceTest.java
-                    └── soap
-                        └── SoapServiceTest.java
+            └── group1
+                ├── rest
+                └── soap
 
 
 ## Prerequisites
