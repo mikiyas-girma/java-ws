@@ -51,7 +51,7 @@ Deploying the Application
 To deploy the application to Apache Tomcat, copy the generated WAR file to the Tomcat webapps directory:
 
 ```bash
-sudo cp target/webservice-assignment-1.0-SNAPSHOT.war /var/lib/tomcat9/webapps/
+sudo cp target/webservice-assignment-1.0-SNAPSHOT.war /opt/tomcat/webapps/
 ```
 
 Restart Tomcat to deploy the application:
