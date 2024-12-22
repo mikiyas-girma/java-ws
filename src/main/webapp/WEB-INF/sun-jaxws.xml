@@ -4,4 +4,8 @@
         name="BookService"
         implementation="group1.soap.service.BookServiceImpl"
         url-pattern="/soap/books"/>
+    <endpoint
+        name="AuthorService"
+        implementation="group1.soap.service.AuthorServiceImpl"
+        url-pattern="/soap/authors"/>
 </endpoints>

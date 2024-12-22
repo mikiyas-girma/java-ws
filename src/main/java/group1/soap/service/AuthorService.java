@@ -1,24 +1,24 @@
 package group1.soap.service;
 
-import group1.soap.model.Book;
+import group1.soap.model.Author;
 import javax.jws.WebMethod;
 import javax.jws.WebService;
 import java.util.List;
 
 @WebService(targetNamespace = "http://soap.group1/")
-public interface BookService {
+public interface AuthorService {
     @WebMethod
-    List<Book> getBooks();
+    List<Author> getAuthors();
 
     @WebMethod
-    void addBook(Book book);
+    void addAuthor(Author author);
 
     @WebMethod
-    Book getBookByIsbn(String isbn);
+    Author getAuthorById(String id);
 
     @WebMethod
-    void updateBook(Book book);
+    void updateAuthor(Author author);
 
     @WebMethod
-    void deleteBook(String isbn);
+    void deleteAuthor(String id);
 }
