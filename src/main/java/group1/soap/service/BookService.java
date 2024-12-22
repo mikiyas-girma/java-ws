@@ -2,6 +2,7 @@ package group1.soap.service;
 
 import group1.soap.model.Book;
 import javax.jws.WebMethod;
+import javax.jws.WebParam;
 import javax.jws.WebService;
 import java.util.List;
 
@@ -11,14 +12,14 @@ public interface BookService {
     List<Book> getBooks();
 
     @WebMethod
-    void addBook(Book book);
+    Book addBook(Book book);
 
     @WebMethod
-    Book getBookByIsbn(String isbn);
+    Book getBookByIsbn(@WebParam(name = "isbn") String isbn);
 
     @WebMethod
-    void updateBook(Book book);
+    Book updateBook(Book book);
 
     @WebMethod
-    void deleteBook(String isbn);
+    String deleteBook(@WebParam(name = "isbn") String isbn);
 }

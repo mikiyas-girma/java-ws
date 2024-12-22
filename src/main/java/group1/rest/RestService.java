@@ -53,11 +53,18 @@ public class RestService {
         return Response.ok(updatedBook).build();
     }
 
-    @DELETE
-    @Path("/{isbn}")
-    @Produces(MediaType.APPLICATION_JSON)
-    public Response deleteBook(@PathParam("isbn") String isbn) {
-        books = books.stream().filter(book -> !book.getIsbn().equals(isbn)).collect(Collectors.toList());
-        return Response.noContent().build();
-    }
+  @DELETE
+  @Path("/{isbn}")
+  @Produces(MediaType.APPLICATION_JSON)
+  public Response deleteBook(@PathParam("isbn") String isbn) {
+      boolean bookExists = books.stream().anyMatch(book -> book.getIsbn().equals(isbn));
+      if (bookExists) {
+          books = books.stream().filter(book -> !book.getIsbn().equals(isbn)).collect(Collectors.toList());
+          return Response.ok("{\"message\":\"Book deleted successfully.\"}").build();
+      } else {
+          return Response.status(Response.Status.NOT_FOUND)
+                        .entity("{\"message\":\"Book not found.\"}")
+                        .build();
+      }
+  }
 }
