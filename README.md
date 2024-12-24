@@ -128,14 +128,7 @@ Publishes the SOAP web service.
 Implements a CORS filter to handle cross-origin requests.
 
 ### index.jsp
-A simple JSP file that serves as the home page of the web service application.
-
-## Screenshots
-Include screenshots of the following to demonstrate successful deployment:
-- Tomcat Manager showing the deployed application.
-- Browser showing the WSDL for the SOAP web service.
-- Postman showing successful requests and responses for the SOAP web service.
-- Postman showing successful requests and responses for the REST web service.
+A simple JSP file that serves as the home page of the web service application
 
 ## Conclusion
 This project demonstrates how to implement and deploy a simple web service in a Java environment using both SOAP and RESTful web services.
